@@ -22,6 +22,10 @@ public class Usuario {
         this.senha = senha;
     }
 
+    public Usuario() {
+    }
+    //AL
+
     public Long getId() {
         return id;
     }

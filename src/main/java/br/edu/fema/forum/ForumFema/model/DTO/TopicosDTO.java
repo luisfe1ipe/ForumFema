@@ -12,7 +12,6 @@ public class TopicosDTO {
     private String mensagem;
     private LocalDateTime dataCriacao;
 
-
     public TopicosDTO(Topico topico) {
         super();
         this.id = topico.getId();
@@ -20,6 +19,9 @@ public class TopicosDTO {
         this.mensagem = topico.getMensagem();
         this.dataCriacao = topico.getDataCriacao();
     }
+
+    public static List<TopicosDTO> converter(List<Topico>topicos){
+        return topicos.stream().map(TopicosDTO::new).collect(Collectors.toList());}
 
     public Long getId() {
         return id;
@@ -35,9 +37,6 @@ public class TopicosDTO {
 
     public LocalDateTime getDataCriacao() {
         return dataCriacao;
-    }
-    public static List<TopicosDTO> converter(List<Topico> topicos){
-        return topicos.stream().map(TopicosDTO::new).collect(Collectors.toList());
     }
 
 }
