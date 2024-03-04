@@ -8,6 +8,7 @@ public class ForumFemaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ForumFemaApplication.class, args);
+		//COMENT
 	}
 
 }
