@@ -18,7 +18,7 @@ public class Topico {
     private LocalDateTime dataCriacao = LocalDateTime.now();
 
     @Enumerated(EnumType.STRING)
-    private StatusTopico Status = StatusTopico.NAO_RESPONDIDO;
+    private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
 
     @ManyToOne
     private Usuario autor;
@@ -70,12 +70,12 @@ public class Topico {
         this.dataCriacao = dataCriacao;
     }
 
-    public StatusTopico getStatus() {
-        return Status;
+    public StatusTopico getstatus() {
+        return status;
     }
 
-    public void setStatus(StatusTopico status) {
-        Status = status;
+    public void setstatus(StatusTopico status) {
+        status = status;
     }
 
     public Usuario getAutor() {
